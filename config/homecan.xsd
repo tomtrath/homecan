@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	targetNamespace="homecan" 
+	xmlns="homecan"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+
+<xs:element name="setup">
+	<xs:complexType>
+  		<xs:sequence>
+  			<xs:element name="segment" minOccurs="1" maxOccurs="unbounded">
+				<xs:complexType>
+  					<xs:sequence>  					
+    					<xs:element name="device" minOccurs="1" maxOccurs="unbounded">			
+							<xs:complexType>
+								<xs:sequence>										
+									<xs:element name="location" type="xs:string" minOccurs="0" maxOccurs="1"/>
+									<xs:element name="hardware" type="xs:string" minOccurs="0" maxOccurs="1"/>
+									<xs:element name="firmware" type="xs:string" minOccurs="0" maxOccurs="1"/>
+									<xs:element name="bootloader" type="xs:boolean" minOccurs="1" maxOccurs="1"/>  					    						  				
+									<xs:element name="channel" minOccurs="0" maxOccurs="63">
+										<xs:complexType>			  					
+											<xs:sequence>
+												<xs:element name="parameter" type="xs:string" minOccurs="0" maxOccurs="5"/>												
+												<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>    
+											</xs:sequence>
+											<xs:attribute name="number" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:integer">
+														<xs:minInclusive value="0"/>
+														<xs:maxInclusive value="63"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="function" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:enumeration value="NONE"/>
+														<xs:enumeration value="INPUT"/>
+														<xs:enumeration value="OUTPUT"/>
+														<xs:enumeration value="RAFFSTORE"/>
+														<xs:enumeration value="SSR"/>
+														<xs:enumeration value="DIMMER"/>
+														<xs:enumeration value="FTK"/>
+														<xs:enumeration value="TEMPSENS"/>
+														<xs:enumeration value="LED"/>
+														<xs:enumeration value="BUZZER"/>
+														<xs:enumeration value="IRTX"/>
+														<xs:enumeration value="IRRX"/>
+														<xs:enumeration value="MOTION"/>
+														<xs:enumeration value="PUSHBUTTON"/>
+														<xs:enumeration value="HUMIDITY"/>
+														<xs:enumeration value="LUMINOSITY"/>
+														<xs:enumeration value="KEYPAD"/>  
+														<xs:enumeration value="KWB_INPUT"/>
+														<xs:enumeration value="KWB_TEMP"/>
+														<xs:enumeration value="KWB_HK"/>   									
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>  									
+											<xs:attribute name="portA" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:integer">
+														<xs:minInclusive value="0"/>
+														<xs:maxInclusive value="64"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="portB" use="optional">
+												<xs:simpleType>
+													<xs:restriction base="xs:integer">
+														<xs:minInclusive value="0"/>
+														<xs:maxInclusive value="64"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:complexType>
+									</xs:element>		  				
+								</xs:sequence>		  			
+								<xs:attribute name="address" use="required">
+									<xs:simpleType>
+										<xs:restriction base="xs:integer">
+											<xs:minInclusive value="1"/>
+											<xs:maxInclusive value="255"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+							</xs:complexType>
+						</xs:element>	  		
+					</xs:sequence> 
+					<xs:attribute name="ip" type="xs:anyURI" use="required"/>  						  					
+				</xs:complexType>
+			</xs:element>	  						
+		</xs:sequence> 
+	</xs:complexType>
+</xs:element>
+
+
+  
+</xs:schema>

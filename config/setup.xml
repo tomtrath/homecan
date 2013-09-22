@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- see HomeCANProtokoll.xlsx for details on functions and ports -->
+<setup 	
+	xmlns="homecan"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<segment ip="192.168.1.10">
+		<device address="1">
+			<location>Schaltschrank Keller/Boiler</location>
+			<hardware>NetworkCAN</hardware>
+			<firmware>firmware/NetworkCAN/networkcan.hex</firmware>
+			<bootloader>true</bootloader>	
+		</device>
+		<device address="10">
+			<location>Vorraum Eingangstür</location>
+			<hardware>MotionCAN</hardware>
+			<firmware>firmware/MotionCAN/motioncan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="MOTION" portA="0"/>			
+		</device>		
+		<device address="11">
+			<location>Vorraum Kellerstiege</location>
+			<hardware>MotionCAN</hardware>
+			<firmware>firmware/MotionCAN/motioncan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="MOTION" portA="0"/>			
+		</device>				
+		<device address="32">
+			<location>Schaltschrank Keller</location>
+			<hardware>ControlCAN</hardware>
+			<firmware>firmware/ControlCAN/controlcan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="TEMPSENS" portA="46">
+				<parameter>30</parameter>
+				<description>Onboard Temperature</description>
+			</channel>						
+			<channel number="4" function="INPUT" portA="0">
+				<description>Taster Eingangstür Taste 1</description>
+			</channel>
+			<channel number="5" function="INPUT" portA="1">
+				<description>Taster Eingangstür Taste 2</description>
+			</channel>
+			<channel number="6" function="INPUT" portA="2">
+				<description>Taster Eingangstür Taste 3</description>
+			</channel>
+			<channel number="7" function="INPUT" portA="3">
+				<description>Taster Eingangstür Taste 4</description>
+			</channel>
+			<channel number="8" function="INPUT" portA="4">
+				<description>Taster Eingangstür Taste 5</description>
+			</channel>
+			<channel number="9" function="INPUT" portA="5">
+				<description>Taster Eingangstür Taste 6</description>
+			</channel>
+			<channel number="10" function="INPUT" portA="6">
+				<description>Taster Eingangstür Taste 7</description>
+			</channel>
+			<channel number="11" function="INPUT" portA="7">
+				<description>Taster Eingangstür Taste 8</description>
+			</channel>
+			<channel number="12" function="LED" portA="34">
+				<description>Taster Eingangstür LED 1</description>
+			</channel>
+			<channel number="13" function="LED" portA="35">
+				<description>Taster Eingangstür LED 2</description>
+			</channel>			
+			<channel number="14" function="LED" portA="36">
+				<description>Taster Eingangstür LED 3</description>
+			</channel>
+			<channel number="15" function="LED" portA="37">
+				<description>Taster Eingangstür LED 4</description>
+			</channel>												
+			<channel number="16" function="INPUT" portA="8">
+				<description>Taster Klo Taste 1</description>
+			</channel>
+			<channel number="17" function="INPUT" portA="9">
+				<description>Taster Klo Taste 2</description>
+			</channel>
+			<channel number="18" function="INPUT" portA="10">
+				<description>Taster Klo Taste 3</description>
+			</channel>
+			<channel number="19" function="INPUT" portA="11">
+				<description>Taster Klo Taste 4</description>
+			</channel>
+			<channel number="20" function="INPUT" portA="12">
+				<description>Taster Klo Taste 5</description>
+			</channel>
+			<channel number="21" function="INPUT" portA="13">
+				<description>Taster Klo Taste 6</description>
+			</channel>
+			<channel number="22" function="INPUT" portA="14">
+				<description>Taster Klo Taste 7</description>
+			</channel>
+			<channel number="23" function="INPUT" portA="15">
+				<description>Taster Klo Taste 8</description>
+			</channel>
+			<channel number="24" function="LED" portA="38">
+				<description>Taster Klo LED 1</description>
+			</channel>
+			<channel number="25" function="LED" portA="39">
+				<description>Taster Klo LED 2</description>
+			</channel>			
+			<channel number="26" function="LED" portA="40">
+				<description>Taster Klo LED 3</description>
+			</channel>
+			<channel number="27" function="LED" portA="41">
+				<description>Taster Klo LED 4</description>
+			</channel>			
+			<channel number="28" function="RAFFSTORE" portA="23" portB="22">
+				<parameter>28</parameter>
+				<description>Raffstore Vorraum</description>			
+			</channel>							
+			<channel number="29" function="SSR" portA="24" portB="16">
+				<description>Ventilator Klo</description>
+			</channel>
+			<channel number="30" function="DIMMER" portA="44">
+				<description>Licht Vorraum Eingang</description>
+			</channel>
+			<channel number="31" function="DIMMER" portA="44">
+				<description>Licht Toilette</description>
+			</channel>			
+			<channel number="32" function="INPUT" portA="18">
+				<description>Taster Kellereingang</description>
+			</channel>
+			<channel number="33" function="SSR" portA="25" portB="17">
+				<description>Licht Keller</description>
+			</channel>			
+			<channel number="34" function="SSR" portA="26" portB="19">
+				<description>Motorschloß Tag/Nacht</description>
+			</channel>			
+			<channel number="35" function="SSR" portA="27" portB="20">
+				<description>Motorschloß Taster</description>
+			</channel>			
+			<channel number="36" function="INPUT" portA="21">
+				<description>Motorschloß Meldeausgang</description>
+			</channel>		
+		</device>		
+		<device address="33">
+			<location>Schaltschrank Keller Boiler</location>
+			<hardware>ControlCAN</hardware>
+			<firmware>firmware/ControlCAN/controlcan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="TEMPSENS" portA="46">
+				<parameter>30</parameter>
+				<description>Onboard Temperature</description>
+			</channel>			
+			<channel number="4" function="INPUT" portA="0">
+				<description>Taster Esszimmer Eingang Taste 1</description>
+			</channel>
+			<channel number="5" function="INPUT" portA="1">
+				<description>Taster Esszimmer Eingang Taste 2</description>
+			</channel>
+			<channel number="6" function="INPUT" portA="2">
+				<description>Taster Esszimmer Eingang Taste 3</description>
+			</channel>
+			<channel number="7" function="INPUT" portA="3">
+				<description>Taster Esszimmer Eingang Taste 4</description>
+			</channel>
+			<channel number="8" function="INPUT" portA="4">
+				<description>Taster Esszimmer Eingang Taste 5</description>
+			</channel>
+			<channel number="9" function="INPUT" portA="5">
+				<description>Taster Esszimmer Eingang Taste 6</description>
+			</channel>
+			<channel number="10" function="INPUT" portA="6">
+				<description>Taster Esszimmer Eingang Taste 7</description>
+			</channel>
+			<channel number="11" function="INPUT" portA="7">
+				<description>Taster Esszimmer Eingang Taste 8</description>
+			</channel>
+			<channel number="12" function="LED" portA="34">
+				<description>Taster Esszimmer Eingang LED 1</description>
+			</channel>
+			<channel number="13" function="LED" portA="35">
+				<description>Taster Esszimmer Eingang LED 2</description>
+			</channel>			
+			<channel number="14" function="LED" portA="36">
+				<description>Taster Esszimmer Eingang LED 3</description>
+			</channel>
+			<channel number="15" function="LED" portA="37">
+				<description>Taster Esszimmer Eingang LED 4</description>
+			</channel>												
+			<channel number="16" function="INPUT" portA="8">
+				<description>Taster Küche Eingang Taste 1</description>
+			</channel>
+			<channel number="17" function="INPUT" portA="9">
+				<description>Taster Küche Eingang Taste 2</description>
+			</channel>
+			<channel number="18" function="INPUT" portA="10">
+				<description>Taster Küche Eingang Taste 3</description>
+			</channel>
+			<channel number="19" function="INPUT" portA="11">
+				<description>Taster Küche Eingang Taste 4</description>
+			</channel>
+			<channel number="20" function="INPUT" portA="12">
+				<description>Taster Küche Eingang Taste 5</description>
+			</channel>
+			<channel number="21" function="INPUT" portA="13">
+				<description>Taster Küche Eingang Taste 6</description>
+			</channel>
+			<channel number="22" function="INPUT" portA="14">
+				<description>Taster Küche Eingang Taste 7</description>
+			</channel>
+			<channel number="23" function="INPUT" portA="15">
+				<description>Taster Küche Eingang Taste 8</description>
+			</channel>
+			<channel number="24" function="LED" portA="38">
+				<description>Taster Küche Eingang LED 1</description>
+			</channel>
+			<channel number="25" function="LED" portA="39">
+				<description>Taster Küche Eingang LED 2</description>
+			</channel>			
+			<channel number="26" function="LED" portA="40">
+				<description>Taster Küche Eingang LED 3</description>
+			</channel>
+			<channel number="27" function="LED" portA="41">
+				<description>Taster Küche Eingang LED 4</description>
+			</channel>			
+			<channel number="28" function="RAFFSTORE" portA="30" portB="31">
+				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
+				<description>Raffstore Wohnzimmer</description>			
+			</channel>
+			<channel number="29" function="RAFFSTORE" portA="33" portB="32">
+				<parameter>74</parameter> <!-- UP 	 = 5100/t 	-->
+				<parameter>77</parameter> <!-- DOWN  = 5100/t 	-->
+				<parameter>105</parameter> <!-- OPEN  = 127.5/t	-->
+				<parameter>134</parameter> <!-- CLOSE = 127.5/t	-->				
+				<description>Raffstore Esszimmer</description>			
+			</channel>							
+			<channel number="30" function="DIMMER" portA="44">
+				<description>Licht Küche Decke Vorne</description>
+			</channel>			
+			<channel number="31" function="DIMMER" portA="44">
+				<description>Licht Esszimmer</description>
+			</channel>			
+			<channel number="32" function="DIMMER" portA="44">
+				<description>Licht Vorraum</description>
+			</channel>			
+			<channel number="33" function="DIMMER" portA="44">
+				<description>Licht Wohnzimmer</description>
+			</channel>			
+			<channel number="34" function="FTK" portA="45">
+				<parameter>0</parameter>
+				<parameter>96</parameter>
+				<parameter>56</parameter>
+				<parameter>3</parameter>
+				<parameter>1</parameter>
+				<!-- data=[1, 3, 56, 96]] 16988256 -->
+				<description>Hebe/Schiebetür Esszimmer</description>
+			</channel>
+			<channel number="35" function="FTK" portA="45">
+				<parameter>0</parameter>
+				<parameter>5</parameter>
+				<parameter>148</parameter>
+				<parameter>3</parameter>
+				<parameter>1</parameter>
+				<!-- data=[1, 3, -108, 5]] 17011717 -->				
+				<description>Hebe/Schiebetür Küche</description>
+			</channel>			
+			<channel number="36" function="FTK" portA="45">
+				<parameter>1</parameter>
+				<parameter>250</parameter>
+				<parameter>97</parameter>
+				<parameter>134</parameter>
+				<parameter>0</parameter>
+				<!--  data=[-6, 97, -122, 0]] -94272000 -->								
+				<description>Hebe/Schiebetür Sitzplatz</description>
+			</channel>				
+			<channel number="37" function="SSR" portA="22" portB="16">
+				<description>unbelegt</description>
+			</channel>
+			<channel number="38" function="SSR" portA="23" portB="17">
+				<description>unbelegt</description>
+			</channel>
+			<channel number="39" function="SSR" portA="24" portB="18">
+				<description>unbelegt</description>
+			</channel>
+			<channel number="40" function="SSR" portA="25" portB="19">
+				<description>unbelegt</description>
+			</channel>
+		</device>
+		<device address="34">
+			<location>Schaltschrank Keller Boiler</location>
+			<hardware>ControlCAN</hardware>
+			<firmware>firmware/ControlCAN/controlcan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="TEMPSENS" portA="46">
+				<parameter>30</parameter>
+				<description>Onboard Temperature</description>
+			</channel>			
+			<channel number="4" function="INPUT" portA="0">
+				<description>Taster Wohnzimmer Taste 1</description>
+			</channel>
+			<channel number="5" function="INPUT" portA="1">
+				<description>Taster Wohnzimmer Taste 2</description>
+			</channel>
+			<channel number="6" function="INPUT" portA="2">
+				<description>Taster Wohnzimmer Taste 3</description>
+			</channel>
+			<channel number="7" function="INPUT" portA="3">
+				<description>Taster Wohnzimmer Taste 4</description>
+			</channel>
+			<channel number="8" function="INPUT" portA="4">
+				<description>Taster Wohnzimmer Taste 5</description>
+			</channel>
+			<channel number="9" function="INPUT" portA="5">
+				<description>Taster Wohnzimmer Taste 6</description>
+			</channel>
+			<channel number="10" function="INPUT" portA="6">
+				<description>Taster Wohnzimmer Taste 7</description>
+			</channel>
+			<channel number="11" function="INPUT" portA="7">
+				<description>Taster Wohnzimmer Taste 8</description>
+			</channel>
+			<channel number="12" function="LED" portA="34">
+				<description>Taster Wohnzimmer LED 1</description>
+			</channel>
+			<channel number="13" function="LED" portA="35">
+				<description>Taster Wohnzimmer LED 2</description>
+			</channel>			
+			<channel number="14" function="LED" portA="36">
+				<description>Taster Wohnzimmer LED 3</description>
+			</channel>
+			<channel number="15" function="LED" portA="37">
+				<description>Taster Wohnzimmer LED 4</description>
+			</channel>												
+			<channel number="16" function="INPUT" portA="8">
+				<description>Taster Esszimmer Terassentür Taste 1</description>
+			</channel>
+			<channel number="17" function="INPUT" portA="9">
+				<description>Taster Esszimmer Terassentür Taste 2</description>
+			</channel>
+			<channel number="18" function="INPUT" portA="10">
+				<description>Taster Esszimmer Terassentür Taste 3</description>
+			</channel>
+			<channel number="19" function="INPUT" portA="11">
+				<description>Taster Esszimmer Terassentür Taste 4</description>
+			</channel>
+			<channel number="20" function="INPUT" portA="12">
+				<description>Taster Esszimmer Terassentür Taste 5</description>
+			</channel>
+			<channel number="21" function="INPUT" portA="13">
+				<description>Taster Esszimmer Terassentür Taste 6</description>
+			</channel>
+			<channel number="22" function="INPUT" portA="14">
+				<description>Taster Esszimmer Terassentür Taste 7</description>
+			</channel>
+			<channel number="23" function="INPUT" portA="15">
+				<description>Taster Esszimmer Terassentür Taste 8</description>
+			</channel>
+			<channel number="24" function="LED" portA="38">
+				<description>Taster Esszimmer Terassentür LED 1</description>
+			</channel>
+			<channel number="25" function="LED" portA="39">
+				<description>Taster Esszimmer Terassentür LED 2</description>
+			</channel>			
+			<channel number="26" function="LED" portA="40">
+				<description>Taster Esszimmer Terassentür LED 1</description>
+			</channel>
+			<channel number="27" function="LED" portA="41">
+				<description>Taster Esszimmer Terassentür LED 2</description>
+			</channel>								
+		</device>
+		<device address="35">
+			<location>Schaltschrank Schlupfkeller</location>
+			<hardware>ControlCAN</hardware>
+			<firmware>firmware/ControlCAN/controlcan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="TEMPSENS" portA="46">
+				<parameter>30</parameter>
+				<description>Onboard Temperature</description>
+			</channel>			
+			<channel number="4" function="INPUT" portA="0">
+				<description>Taster Badezimmer Tür Eingang Taste 1</description>
+			</channel>
+			<channel number="5" function="INPUT" portA="1">
+				<description>Taster Badezimmer Tür Eingang Taste 2</description>
+			</channel>
+			<channel number="6" function="INPUT" portA="2">
+				<description>Taster Badezimmer Tür Eingang Taste 3</description>
+			</channel>			
+			<channel number="9" function="INPUT" portA="5">
+				<description>Taster Badezimmer Tür Eingang Taste 6</description>
+			</channel>
+			<channel number="16" function="INPUT" portA="8">
+				<description>Taster Badezimmer Fenster Taste 1</description>
+			</channel>
+			<channel number="17" function="INPUT" portA="9">
+				<description>Taster Badezimmer Fenster Taste 2</description>
+			</channel>
+			<channel number="18" function="INPUT" portA="10">
+				<description>Taster Badezimmer Fenster Taste 3</description>
+			</channel>
+			<channel number="19" function="INPUT" portA="11">
+				<description>Taster Badezimmer Fenster Taste 4</description>
+			</channel>
+			<channel number="20" function="INPUT" portA="12">
+				<description>Taster Badezimmer Fenster Taste 5</description>
+			</channel>
+			<channel number="21" function="INPUT" portA="13">
+				<description>Taster Badezimmer Fenster Taste 6</description>
+			</channel>
+			<channel number="22" function="INPUT" portA="14">
+				<description>Taster Badezimmer Fenster Taste 7</description>
+			</channel>
+			<channel number="23" function="INPUT" portA="15">
+				<description>Taster Badezimmer Fenster Taste 8</description>
+			</channel>
+			<channel number="24" function="LED" portA="38">
+				<description>Taster Badezimmer Fenster LED 1</description>
+			</channel>
+			<channel number="25" function="LED" portA="39">
+				<description>Taster Badezimmer Fenster LED 2</description>
+			</channel>			
+			<channel number="26" function="LED" portA="40">
+				<description>Taster Badezimmer Fenster LED 3</description>
+			</channel>
+			<channel number="27" function="LED" portA="41">
+				<description>Taster Badezimmer Fenster LED 4</description>
+			</channel>			
+			<channel number="28" function="RAFFSTORE" portA="22" portB="23">
+				<parameter>80</parameter> <!-- UP 	 = 5100/t 	-->
+				<parameter>82</parameter> <!-- DOWN  = 5100/t 	-->
+				<parameter>105</parameter> <!-- OPEN  = 127.5/t	-->
+				<parameter>134</parameter> <!-- CLOSE = 127.5/t	-->				
+				<description>Raffstore Küche Hebeschiebetür</description>			
+			</channel>
+			<channel number="29" function="RAFFSTORE" portA="24" portB="25">
+				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
+				<description>Raffstore Küche Fenster links</description>			
+			</channel>							
+			<channel number="30" function="RAFFSTORE" portA="26" portB="27">
+				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
+				<description>Raffstore Küche Fenster rechts</description>			
+			</channel>
+			<channel number="31" function="DIMMER" portA="44">
+				<description>Licht Küche hinten</description>
+			</channel>			
+			<channel number="32" function="DIMMER" portA="44">			
+				<description>Licht Küche Arbeitsfläche</description>
+			</channel>			
+			<channel number="33" function="SSR" portA="28" portB="16">
+				<description>Steckdosen Küche Arbeitsplatte</description>
+			</channel>
+			<channel number="34" function="SSR" portA="29" portB="17">
+				<description>Steckdosen Bad</description>
+			</channel>
+			<channel number="35" function="SSR" portA="30" portB="18">
+				<description>unbelegt</description>
+			</channel>
+			<channel number="36" function="SSR" portA="31" portB="19">
+				<description>Licht Badezimmer Spiegel</description>
+			</channel>
+			<channel number="37" function="SSR" portA="32" portB="20">
+				<description>unbelegt</description>
+			</channel>
+			<channel number="38" function="SSR" portA="33" portB="21">
+				<description>unbelegt</description>
+			</channel>	
+			<channel number="40" function="DIMMER" portA="44">			
+				<description>Licht Badezimmer Decke</description>
+			</channel>			
+		</device>
+		<device address="36">
+			<location>Schaltschrank Schlupfkeller</location>
+			<hardware>ControlCAN</hardware>
+			<firmware>firmware/ControlCAN/controlcan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="TEMPSENS" portA="46">
+				<parameter>30</parameter>
+				<description>Onboard Temperature</description>
+			</channel>			
+			<channel number="4" function="INPUT" portA="0">
+				<description>Taster Küche Arbeitsfläche Eingang Taste 1</description>
+			</channel>
+			<channel number="5" function="INPUT" portA="1">
+				<description>Taster Küche Arbeitsfläche Eingang Taste 2</description>
+			</channel>
+			<channel number="6" function="INPUT" portA="2">
+				<description>Taster Küche Arbeitsfläche Eingang Taste 3</description>
+			</channel>
+			<channel number="7" function="INPUT" portA="3">
+				<description>Taster Küche Arbeitsfläche Eingang Taste 4</description>
+			</channel>
+			<channel number="8" function="INPUT" portA="4">
+				<description>Taster Küche Arbeitsfläche Eingang Taste 5</description>
+			</channel>
+			<channel number="9" function="INPUT" portA="5">
+				<description>Taster Küche Arbeitsfläche Eingang Taste 6</description>
+			</channel>
+			<channel number="10" function="INPUT" portA="6">
+				<description>Taster Küche Arbeitsfläche Eingang Taste 7</description>
+			</channel>
+			<channel number="11" function="INPUT" portA="7">
+				<description>Taster Küche Arbeitsfläche Eingang Taste 8</description>
+			</channel>
+			<channel number="12" function="LED" portA="34">
+				<description>Taster Küche Arbeitsfläche Eingang LED 1</description>
+			</channel>
+			<channel number="13" function="LED" portA="35">
+				<description>Taster Küche Arbeitsfläche Eingang LED 2</description>
+			</channel>			
+			<channel number="14" function="LED" portA="36">
+				<description>Taster Küche Arbeitsfläche Eingang LED 3</description>
+			</channel>
+			<channel number="15" function="LED" portA="37">
+				<description>Taster Küche Arbeitsfläche Eingang LED 4</description>
+			</channel>												
+			<channel number="16" function="INPUT" portA="8">
+				<description>Taster  Küche Hebe/Schiebetür Taste 1</description>
+			</channel>
+			<channel number="17" function="INPUT" portA="9">
+				<description>Taster  Küche Hebe/Schiebetür Taste 2</description>
+			</channel>
+			<channel number="18" function="INPUT" portA="10">
+				<description>Taster  Küche Hebe/Schiebetür Taste 3</description>
+			</channel>
+			<channel number="19" function="INPUT" portA="11">
+				<description>Taster  Küche Hebe/Schiebetür Taste 4</description>
+			</channel>
+			<channel number="20" function="INPUT" portA="12">
+				<description>Taster  Küche Hebe/Schiebetür Taste 5</description>
+			</channel>
+			<channel number="21" function="INPUT" portA="13">
+				<description>Taster  Küche Hebe/Schiebetür Taste 6</description>
+			</channel>
+			<channel number="22" function="INPUT" portA="14">
+				<description>Taster  Küche Hebe/Schiebetür Taste 7</description>
+			</channel>
+			<channel number="23" function="INPUT" portA="15">
+				<description>Taster  Küche Hebe/Schiebetür Taste 8</description>
+			</channel>
+			<channel number="24" function="LED" portA="38">
+				<description>Taster  Küche Hebe/Schiebetür LED 1</description>
+			</channel>
+			<channel number="25" function="LED" portA="39">
+				<description>Taster  Küche Hebe/Schiebetür LED 2</description>
+			</channel>			
+			<channel number="26" function="LED" portA="40">
+				<description>Taster  Küche Hebe/Schiebetür LED 3</description>
+			</channel>
+			<channel number="27" function="LED" portA="41">
+				<description>Taster  Küche Hebe/Schiebetür LED 4</description>
+			</channel>			
+			<channel number="28" function="RAFFSTORE" portA="23" portB="22">
+				<parameter>34</parameter>
+				<description>Raffstore Badezimmer</description>		
+			</channel>
+		</device>
+		<device address="64">
+			<location>Keypad Eingangstür</location>
+			<hardware>SensorCAN</hardware>
+			<firmware>firmware/KeypadCAN/sensorcan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="TEMPSENS" portA="0">
+				<description>Lufttemperatur</description>
+			</channel>
+			<channel number="12" function="KEYPAD" portA="10">
+				<description>Tastenfeld Eingangstür</description>
+			</channel>						
+			<channel number="13" function="LED" portA="11">
+				<description>Beleuchtung Tastenfeld Eingangstür</description>
+			</channel>								
+		</device>		
+		<device address="65">
+			<location>undefined</location>
+			<hardware>SensorCAN</hardware>
+			<firmware>firmware/SensorCAN/sensorcan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="TEMPSENS" portA="0">				
+				<parameter>30</parameter>
+				<description>Lufttemperatur</description>
+			</channel>	
+			<channel number="2" function="HUMIDITY" portA="2">				
+				<parameter>30</parameter>
+				<parameter>-42</parameter>
+				<parameter>242</parameter>				
+				<description>Luftfeuchte</description>
+			</channel>		
+			<channel number="3" function="LUMINOSITY" portA="3">				
+				<parameter>3</parameter>
+				<description>Helligkeit</description>
+			</channel>
+			<channel number="4" function="LED" portA="6">
+				<description>LED blau</description>
+			</channel>			
+			<channel number="5" function="LED" portA="7">
+				<description>LED blau</description>
+			</channel>			
+			<channel number="6" function="LED" portA="8">
+				<description>LED blau</description>
+			</channel>			
+			<channel number="7" function="LED" portA="9">
+				<description>LED blau</description>
+			</channel>																
+		</device>
+		<device address="66">
+			<location>undefined</location>
+			<hardware>SensorCAN</hardware>
+			<firmware>firmware/SensorCAN/sensorcan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="TEMPSENS" portA="0">				
+				<parameter>30</parameter>
+				<description>Lufttemperatur</description>
+			</channel>	
+			<channel number="2" function="HUMIDITY" portA="2">				
+				<parameter>30</parameter>
+				<parameter>-39</parameter>
+				<parameter>235</parameter>				
+				<description>Luftfeuchte</description>
+			</channel>		
+			<channel number="3" function="LUMINOSITY" portA="3">				
+				<parameter>30</parameter>
+				<description>Helligkeit</description>
+			</channel>										
+			<channel number="4" function="LED" portA="6">
+				<description>LED blau</description>
+			</channel>			
+			<channel number="5" function="LED" portA="7">
+				<description>LED blau</description>
+			</channel>			
+			<channel number="6" function="LED" portA="8">
+				<description>LED blau</description>
+			</channel>			
+			<channel number="7" function="LED" portA="9">
+				<description>LED blau</description>
+			</channel>											
+		</device>				
+		<device address="67">
+			<location>undefined</location>
+			<hardware>SensorCAN</hardware>
+			<firmware>firmware/SensorCAN/sensorcan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="TEMPSENS" portA="0">				
+				<parameter>30</parameter>
+				<description>Lufttemperatur</description>
+			</channel>	
+			<channel number="2" function="HUMIDITY" portA="2">				
+				<parameter>30</parameter>
+				<parameter>-44</parameter>
+				<parameter>244</parameter>				
+				<description>Luftfeuchte</description>
+			</channel>		
+			<channel number="3" function="LUMINOSITY" portA="3">				
+				<parameter>30</parameter>
+				<description>Helligkeit</description>
+			</channel>										
+			<channel number="4" function="LED" portA="6">
+				<description>LED blau</description>
+			</channel>			
+			<channel number="5" function="LED" portA="7">
+				<description>LED blau</description>
+			</channel>			
+			<channel number="6" function="LED" portA="8">
+				<description>LED blau</description>
+			</channel>			
+			<channel number="7" function="LED" portA="9">
+				<description>LED blau</description>
+			</channel>											
+		</device>			
+	</segment>
+	<segment ip="192.168.1.12">
+		<device address="1">
+			<location>Heizraum</location>
+			<hardware>NetworkCAN</hardware>
+			<firmware>firmware/KwbLAN/networkcan.hex</firmware>
+			<bootloader>true</bootloader>	
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="TEMPSENS" portA="4">				
+				<parameter>30</parameter>
+				<description>Lufttemperatur</description>
+			</channel>
+			<channel number="2" function="INPUT" portA="1">
+				<description>Störung</description>
+			</channel>
+			<channel number="3" function="OUTPUT" portA="0">
+				<description>Extern2</description>
+			</channel>
+			<channel number="4" function="KWB_HK" portA="4">
+				<parameter>0</parameter>
+				<description>HK1</description>
+			</channel>							
+			<channel number="5" function="KWB_HK" portA="4">
+				<parameter>1</parameter>
+				<description>HK2</description>
+			</channel>									
+			
+			<channel number="6" function="KWB_TEMP" portA="3">
+				<parameter>0</parameter>
+				<parameter>30</parameter>
+				<description>Vorlauf HK1</description>
+			</channel>
+			<channel number="7" function="KWB_TEMP" portA="3">
+				<parameter>1</parameter>
+				<parameter>30</parameter>
+				<description>Rücklauf</description>
+			</channel>
+			<channel number="8" function="KWB_TEMP" portA="3">
+				<parameter>2</parameter>
+				<parameter>30</parameter>
+				<description>Boiler</description>
+			</channel>
+			<channel number="9" function="KWB_TEMP" portA="3">
+				<parameter>3</parameter>
+				<parameter>30</parameter>
+				<description>Kessel</description>
+			</channel>
+			<channel number="10" function="KWB_TEMP" portA="3">
+				<parameter>6</parameter>
+				<parameter>30</parameter>
+				<description>Außen</description>
+			</channel>
+			<channel number="11" function="KWB_TEMP" portA="3">
+				<parameter>7</parameter>
+				<parameter>30</parameter>
+				<description>Rauchgas</description>
+			</channel>
+			<channel number="12" function="KWB_TEMP" portA="3">
+				<parameter>11</parameter>
+				<parameter>30</parameter>
+				<description>Vorlauf HK2</description>
+			</channel>
+			
+			<channel number="30" function="KWB_INPUT" portA="3">
+				<parameter>0</parameter>
+				<description>Ascheaustragung</description>
+			</channel>
+			<channel number="31" function="KWB_INPUT" portA="3">
+				<parameter>1</parameter>
+				<description>Boilerpumpe</description>
+			</channel>
+			<channel number="33" function="KWB_INPUT" portA="3">
+				<parameter>3</parameter>
+				<description>Pumpe HK1</description>
+			</channel>
+			<channel number="35" function="KWB_INPUT" portA="3">
+				<parameter>5</parameter>
+				<description>Pumpe HK2</description>
+			</channel>
+			<channel number="36" function="KWB_INPUT" portA="3">
+				<parameter>6</parameter>
+				<description>Hauptrelais</description>
+			</channel>
+			<channel number="37" function="KWB_INPUT" portA="3">
+				<parameter>7</parameter>
+				<description>Raumaustragung</description>
+			</channel>
+			<channel number="38" function="KWB_INPUT" portA="3">
+				<parameter>8</parameter>
+				<description>Reinigung</description>
+			</channel>												
+		</device>
+	</segment>
+<!-- Reserve Devices 	
+	<segment ip="192.168.1.11">
+		<device address="1">
+			<location>Reserve</location>
+			<hardware>NetworkCAN</hardware>			
+			<firmware>firmware/NetworkCAN/networkcan.hex</firmware>
+			<bootloader>true</bootloader>	
+		</device>
+	</segment>
+-->
+</setup>
+
+
