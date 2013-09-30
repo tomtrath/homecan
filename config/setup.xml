@@ -558,9 +558,12 @@
 				<description>Taster  Küche Hebe/Schiebetür LED 4</description>
 			</channel>			
 			<channel number="28" function="RAFFSTORE" portA="23" portB="22">
-				<parameter>34</parameter>
-				<description>Raffstore Badezimmer</description>		
-			</channel>
+				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
+				<description>Raffstore Badezimmer</description>			
+			</channel>		
 		</device>
 		<device address="64">
 			<location>Keypad Eingangstür</location>
