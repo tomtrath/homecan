@@ -31,6 +31,7 @@ public class ChannelConfig {
 		KWB_INPUT(17),
 		KWB_TEMP(18),
 		KWB_HK(19),
+		BUSLOAD(20),
 		RESERVED(255);
 		
 		byte value;
@@ -65,6 +66,7 @@ public class ChannelConfig {
 			case KWB_INPUT:
 			case KWB_TEMP:
 			case KWB_HK:
+			case BUSLOAD:
 				return 1;
 			case RAFFSTORE:				
 			case SSR:

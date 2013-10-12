@@ -54,7 +54,8 @@
 														<xs:enumeration value="KEYPAD"/>  
 														<xs:enumeration value="KWB_INPUT"/>
 														<xs:enumeration value="KWB_TEMP"/>
-														<xs:enumeration value="KWB_HK"/>   									
+														<xs:enumeration value="KWB_HK"/>
+														<xs:enumeration value="BUSLOAD"/>   									
 													</xs:restriction>
 												</xs:simpleType>
 											</xs:attribute>  									

@@ -9,6 +9,10 @@
 			<hardware>NetworkCAN</hardware>
 			<firmware>firmware/NetworkCAN/networkcan.hex</firmware>
 			<bootloader>true</bootloader>	
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="BUSLOAD" portA="5">
+				<parameter>60</parameter>
+			</channel>
 		</device>
 		<device address="10">
 			<location>Vorraum Eingangstür</location>
@@ -109,7 +113,10 @@
 				<description>Taster Klo LED 4</description>
 			</channel>			
 			<channel number="28" function="RAFFSTORE" portA="23" portB="22">
-				<parameter>28</parameter>
+				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->				
 				<description>Raffstore Vorraum</description>			
 			</channel>							
 			<channel number="29" function="SSR" portA="24" portB="16">
