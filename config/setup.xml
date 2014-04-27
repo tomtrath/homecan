@@ -29,7 +29,55 @@
 			<bootloader>true</bootloader>
 			<channel number="0" function="NONE" portA="0"/>
 			<channel number="1" function="MOTION" portA="0"/>			
-		</device>				
+		</device>
+		<device address="12">
+			<location>Eingang außen</location>
+			<hardware>MotionCAN</hardware>
+			<firmware>firmware/MotionCAN/motioncan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="MOTION" portA="0"/>			
+		</device>
+		<device address="13">
+			<location>Stiegenabgang</location>
+			<hardware>MotionCAN</hardware>
+			<firmware>firmware/MotionCAN/motioncan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="MOTION" portA="0"/>			
+		</device>
+		<device address="14">
+			<location>Gang OG</location>
+			<hardware>MotionCAN</hardware>
+			<firmware>firmware/MotionCAN/motioncan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="MOTION" portA="0"/>			
+		</device>			
+		<device address="15">
+			<location>Kasten Nord</location>
+			<hardware>MotionCAN</hardware>
+			<firmware>firmware/MotionCAN/motioncan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="MOTION" portA="0"/>			
+		</device>
+		<device address="16">
+			<location>Kasten Süd</location>
+			<hardware>MotionCAN</hardware>
+			<firmware>firmware/MotionCAN/motioncan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="MOTION" portA="0"/>			
+		</device>	
+		<device address="17">
+			<location>Ankleide</location>
+			<hardware>MotionCAN</hardware>
+			<firmware>firmware/MotionCAN/motioncan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="MOTION" portA="0"/>			
+		</device>
 		<device address="32">
 			<location>Schaltschrank Keller</location>
 			<hardware>ControlCAN</hardware>
@@ -271,7 +319,7 @@
 				<description>Hebe/Schiebetür Küche</description>
 			</channel>			
 			<channel number="36" function="FTK" portA="45">
-				<parameter>1</parameter>
+				<parameter>0</parameter>
 				<parameter>250</parameter>
 				<parameter>97</parameter>
 				<parameter>134</parameter>
@@ -291,6 +339,33 @@
 			<channel number="40" function="SSR" portA="25" portB="19">
 				<description>unbelegt</description>
 			</channel>
+			<channel number="41" function="FTK" portA="45">
+				<parameter>0</parameter>
+				<parameter>147</parameter>
+				<parameter>49</parameter>
+				<parameter>133</parameter>
+				<parameter>1</parameter>
+				<!-- data=[1, 0x85, 0x31, 0x93]] 25506195 -->				
+				<description>Hebe/Schiebetür WG</description>
+			</channel>			
+			<channel number="42" function="FTK" portA="45">
+				<parameter>0</parameter>
+				<parameter>153</parameter>
+				<parameter>55</parameter>
+				<parameter>137</parameter>
+				<parameter>0</parameter>
+				<!-- data=[0, 0x89, 0x37, 0x99]] 8992665 -->				
+				<description>FPE Test</description>
+			</channel>			
+			<channel number="43" function="FTK" portA="45">
+				<parameter>1</parameter>
+				<parameter>0</parameter>
+				<parameter>0</parameter>
+				<parameter>0</parameter>
+				<parameter>0</parameter>
+				<!--  data=[-6, 97, -122, 0]] -94272000 -->								
+				<description>ID Sniffer</description>
+			</channel>				
 		</device>
 		<device address="34">
 			<location>Schaltschrank Keller Boiler</location>
