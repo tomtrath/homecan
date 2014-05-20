@@ -782,17 +782,17 @@
 			</channel>
 			<channel number="4" function="KWB_HK" portA="4">
 				<parameter>0</parameter>
-				<description>HK1</description>
+				<description>HK2/FBH</description>
 			</channel>							
 			<channel number="5" function="KWB_HK" portA="4">
 				<parameter>1</parameter>
-				<description>HK2</description>
+				<description>HK1/HKK</description>
 			</channel>									
 			
 			<channel number="6" function="KWB_TEMP" portA="3">
 				<parameter>0</parameter>
 				<parameter>30</parameter>
-				<description>Vorlauf HK1</description>
+				<description>Vorlauf HK1/HKK</description>
 			</channel>
 			<channel number="7" function="KWB_TEMP" portA="3">
 				<parameter>1</parameter>
@@ -822,7 +822,7 @@
 			<channel number="12" function="KWB_TEMP" portA="3">
 				<parameter>11</parameter>
 				<parameter>30</parameter>
-				<description>Vorlauf HK2</description>
+				<description>Vorlauf HK2/FBH</description>
 			</channel>
 			
 			<channel number="30" function="KWB_INPUT" portA="3">
@@ -835,11 +835,11 @@
 			</channel>
 			<channel number="33" function="KWB_INPUT" portA="3">
 				<parameter>3</parameter>
-				<description>Pumpe HK1</description>
+				<description>Pumpe HK1/HKK</description>
 			</channel>
 			<channel number="35" function="KWB_INPUT" portA="3">
 				<parameter>5</parameter>
-				<description>Pumpe HK2</description>
+				<description>Pumpe HK2/FBH</description>
 			</channel>
 			<channel number="36" function="KWB_INPUT" portA="3">
 				<parameter>6</parameter>
