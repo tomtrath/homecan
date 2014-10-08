@@ -39,14 +39,6 @@
 			<channel number="1" function="MOTION" portA="0"/>			
 		</device>
 		<device address="13">
-			<location>Stiegenabgang</location>
-			<hardware>MotionCAN</hardware>
-			<firmware>firmware/MotionCAN/motioncan.hex</firmware>
-			<bootloader>true</bootloader>
-			<channel number="0" function="NONE" portA="0"/>
-			<channel number="1" function="MOTION" portA="0"/>			
-		</device>
-		<device address="14">
 			<location>Gang OG</location>
 			<hardware>MotionCAN</hardware>
 			<firmware>firmware/MotionCAN/motioncan.hex</firmware>
@@ -54,7 +46,7 @@
 			<channel number="0" function="NONE" portA="0"/>
 			<channel number="1" function="MOTION" portA="0"/>			
 		</device>			
-		<device address="15">
+		<device address="14">
 			<location>Kasten Nord</location>
 			<hardware>MotionCAN</hardware>
 			<firmware>firmware/MotionCAN/motioncan.hex</firmware>
@@ -62,7 +54,7 @@
 			<channel number="0" function="NONE" portA="0"/>
 			<channel number="1" function="MOTION" portA="0"/>			
 		</device>
-		<device address="16">
+		<device address="15">
 			<location>Kasten Süd</location>
 			<hardware>MotionCAN</hardware>
 			<firmware>firmware/MotionCAN/motioncan.hex</firmware>
@@ -70,7 +62,7 @@
 			<channel number="0" function="NONE" portA="0"/>
 			<channel number="1" function="MOTION" portA="0"/>			
 		</device>	
-		<device address="17">
+		<device address="16">
 			<location>Ankleide</location>
 			<hardware>MotionCAN</hardware>
 			<firmware>firmware/MotionCAN/motioncan.hex</firmware>
@@ -646,6 +638,472 @@
 				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
 				<description>Raffstore Badezimmer</description>			
 			</channel>		
+		</device>
+		<device address="38">
+			<location>Schaltschrank Dachboden Süd</location>
+			<hardware>ControlCAN</hardware>
+			<firmware>firmware/ControlCAN/controlcan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="TEMPSENS" portA="46">
+				<parameter>30</parameter>
+				<description>Onboard Temperature</description>
+			</channel>	
+			<channel number="4" function="INPUT" portA="0">
+				<description>Taster Lounge Taste 1</description>
+			</channel>
+			<channel number="5" function="INPUT" portA="1">
+				<description>Taster Lounge Taste 2</description>
+			</channel>
+			<channel number="6" function="INPUT" portA="2">
+				<description>Taster Lounge Taste 3</description>
+			</channel>
+			<channel number="7" function="INPUT" portA="3">
+				<description>Taster Lounge Taste 4</description>
+			</channel>
+			<channel number="8" function="INPUT" portA="4">
+				<description>Taster Lounge Taste 5</description>
+			</channel>
+			<channel number="9" function="INPUT" portA="5">
+				<description>Taster Lounge Taste 6</description>
+			</channel>
+			<channel number="10" function="INPUT" portA="6">
+				<description>Taster Lounge Taste 7</description>
+			</channel>
+			<channel number="11" function="INPUT" portA="7">
+				<description>Taster Lounge Taste 8</description>
+			</channel>
+			<channel number="12" function="LED" portA="34">
+				<description>Taster Lounge LED 1</description>
+			</channel>
+			<channel number="13" function="LED" portA="35">
+				<description>Taster Lounge LED 2</description>
+			</channel>			
+			<channel number="14" function="LED" portA="36">
+				<description>Taster Lounge LED 3</description>
+			</channel>
+			<channel number="15" function="LED" portA="37">
+				<description>Taster Lounge LED 4</description>
+			</channel>												
+			<channel number="16" function="INPUT" portA="8">
+				<description>Taster Kinderzimmer Taste 1</description>
+			</channel>
+			<channel number="17" function="INPUT" portA="9">
+				<description>Taster Kinderzimmer Taste 2</description>
+			</channel>
+			<channel number="18" function="INPUT" portA="10">
+				<description>Taster Kinderzimmer Taste 3</description>
+			</channel>
+			<channel number="19" function="INPUT" portA="11">
+				<description>Taster Kinderzimmer Taste 4</description>
+			</channel>
+			<channel number="20" function="INPUT" portA="12">
+				<description>Taster Kinderzimmer Taste 5</description>
+			</channel>
+			<channel number="21" function="INPUT" portA="13">
+				<description>Taster Kinderzimmer Taste 6</description>
+			</channel>
+			<channel number="22" function="INPUT" portA="14">
+				<description>Taster Kinderzimmer Taste 7</description>
+			</channel>
+			<channel number="23" function="INPUT" portA="15">
+				<description>Taster Kinderzimmer Taste 8</description>
+			</channel>
+			<channel number="24" function="LED" portA="38">
+				<description>Taster Kinderzimmer LED 1</description>
+			</channel>
+			<channel number="25" function="LED" portA="39">
+				<description>Taster Kinderzimmer LED 2</description>
+			</channel>			
+			<channel number="26" function="LED" portA="40">
+				<description>Taster Kinderzimmer LED 3</description>
+			</channel>
+			<channel number="27" function="LED" portA="41">
+				<description>Taster Kinderzimmer LED 4</description>
+			</channel>			
+			<channel number="28" function="RAFFSTORE" portA="22" portB="23">
+				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
+				<description>Raffstore Badezimmer</description>			
+			</channel>		
+			<channel number="29" function="DIMMER" portA="44">			
+				<description>Licht Bad Decke</description>
+			</channel>			
+			<channel number="30" function="SSR" portA="24" portB="16">
+				<description>Licht Bad Spiegel</description>
+			</channel>
+			<channel number="31" function="SSR" portA="25" portB="17">
+				<description>Steckdosen Bad</description>
+			</channel>
+			<channel number="32" function="RAFFSTORE" portA="26" portB="27">
+				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
+				<description>Raffstore Kinderzimmer Ost</description>			
+			</channel>	
+			<channel number="33" function="RAFFSTORE" portA="28" portB="29">
+				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
+				<description>Raffstore Kinderzimmer Süd</description>			
+			</channel>	
+			<channel number="34" function="DIMMER" portA="44">			
+				<description>Licht Kinderzimmer Decke</description>
+			</channel>			
+			<channel number="35" function="SSR" portA="30" portB="18">
+				<description>Steckdosen Kinderzimmer Ost/Westwand</description>
+			</channel>
+			<channel number="36" function="SSR" portA="31" portB="19">
+				<description>Steckdosen Kinderzimmer Südwand</description>
+			</channel>
+			<channel number="37" function="DIMMER" portA="44">			
+				<description>Licht Lounge Spots Süd</description>
+			</channel>	
+			<channel number="38" function="DIMMER" portA="44">			
+				<description>Licht Lounge Decke Süd</description>
+			</channel>	
+			<channel number="39" function="DIMMER" portA="44">			
+				<description>Licht Lounge Spots Nord</description>
+			</channel>	
+			<channel number="40" function="DIMMER" portA="44">			
+				<description>Licht Lounge Decke Nord</description>
+			</channel>	
+			<channel number="41" function="DIMMER" portA="44">			
+				<description>Licht Lounge Spots Gang</description>
+			</channel>	
+			<channel number="42" function="SSR" portA="32" portB="20">
+				<description>Steckdosen Lounge Ofen</description>
+			</channel>	
+			<channel number="43" function="DIMMER" portA="44">			
+				<description>Licht Terasse Süd</description>
+			</channel>	
+		</device>		
+		</device>
+		<device address="37">
+			<location>Schaltschrank Dachboden Süd</location>
+			<hardware>ControlCAN</hardware>
+			<firmware>firmware/ControlCAN/controlcan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="TEMPSENS" portA="46">
+				<parameter>30</parameter>
+				<description>Onboard Temperature</description>
+			</channel>		
+			<channel number="4" function="INPUT" portA="0">
+				<description>Taster Bad Taste 1</description>
+			</channel>
+			<channel number="5" function="INPUT" portA="1">
+				<description>Taster Bad Taste 2</description>
+			</channel>
+			<channel number="6" function="INPUT" portA="2">
+				<description>Taster Bad Taste 3</description>
+			</channel>
+			<channel number="7" function="INPUT" portA="3">
+				<description>Taster Bad Taste 4</description>
+			</channel>
+			<channel number="8" function="INPUT" portA="4">
+				<description>Taster Bad Taste 5</description>
+			</channel>
+			<channel number="9" function="INPUT" portA="5">
+				<description>Taster Bad Taste 6</description>
+			</channel>
+			<channel number="10" function="INPUT" portA="6">
+				<description>Taster Bad Taste 7</description>
+			</channel>
+			<channel number="11" function="INPUT" portA="7">
+				<description>Taster Bad Taste 8</description>
+			</channel>
+			<channel number="12" function="LED" portA="34">
+				<description>Taster Bad LED 1</description>
+			</channel>
+			<channel number="13" function="LED" portA="35">
+				<description>Taster Bad LED 2</description>
+			</channel>			
+			<channel number="14" function="LED" portA="36">
+				<description>Taster Bad LED 3</description>
+			</channel>
+			<channel number="15" function="LED" portA="37">
+				<description>Taster Bad LED 4</description>
+			</channel>											
+			<channel number="28" function="RAFFSTORE" portA="22" portB="23">
+				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
+				<description>Raffstore Lounge Süd</description>			
+			</channel>	
+			<channel number="29" function="RAFFSTORE" portA="24" portB="25">
+				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
+				<description>Raffstore Lounge West</description>			
+			</channel>	
+			<channel number="30" function="RAFFSTORE" portA="26" portB="27">
+				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
+				<description>Raffstore Lounge West Groß</description>			
+			</channel>	
+			<channel number="31" function="SSR" portA="28" portB="16">
+				<description>Steckdosen Lounge Südwand</description>
+			</channel>		
+			<channel number="32" function="SSR" portA="29" portB="17">
+				<description>Steckdosen Lounge West/Nordwand</description>
+			</channel>	
+			<channel number="33" function="SSR" portA="30" portB="18">
+				<description>Licht Spots Eingang</description>
+			</channel>	
+			<channel number="34" function="SSR" portA="31" portB="19">
+				<description>Fluter Südost</description>
+			</channel>	
+			<channel number="35" function="SSR" portA="32" portB="20">
+				<description>Fluter Südwest</description>
+			</channel>	
+		</device>
+		<device address="40">
+			<location>Schaltschrank Dachboden Nord</location>
+			<hardware>ControlCAN</hardware>
+			<firmware>firmware/ControlCAN/controlcan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="TEMPSENS" portA="46">
+				<parameter>30</parameter>
+				<description>Onboard Temperature</description>
+			</channel>		
+			<channel number="4" function="INPUT" portA="0">
+				<description>Taster Ankleide Taste 1</description>
+			</channel>
+			<channel number="5" function="INPUT" portA="1">
+				<description>Taster Ankleide Taste 2</description>
+			</channel>
+			<channel number="6" function="INPUT" portA="2">
+				<description>Taster Ankleide Taste 3</description>
+			</channel>
+			<channel number="7" function="INPUT" portA="3">
+				<description>Taster Ankleide Taste 4</description>
+			</channel>
+			<channel number="8" function="INPUT" portA="4">
+				<description>Taster Ankleide Taste 5</description>
+			</channel>
+			<channel number="9" function="INPUT" portA="5">
+				<description>Taster Ankleide Taste 6</description>
+			</channel>
+			<channel number="10" function="INPUT" portA="6">
+				<description>Taster Ankleide Taste 7</description>
+			</channel>
+			<channel number="11" function="INPUT" portA="7">
+				<description>Taster Ankleide Taste 8</description>
+			</channel>
+			<channel number="12" function="LED" portA="34">
+				<description>Taster Ankleide LED 1</description>
+			</channel>
+			<channel number="13" function="LED" portA="35">
+				<description>Taster Ankleide LED 2</description>
+			</channel>			
+			<channel number="14" function="LED" portA="36">
+				<description>Taster Ankleide LED 3</description>
+			</channel>
+			<channel number="15" function="LED" portA="37">
+				<description>Taster Ankleide LED 4</description>
+			</channel>	
+			<channel number="28" function="RAFFSTORE" portA="22" portB="23">
+				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
+				<description>Raffstore Schlafzimmer West</description>			
+			</channel>	
+			<channel number="29" function="RAFFSTORE" portA="24" portB="25">
+				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
+				<description>Raffstore Schlafzimmer Nord</description>			
+			</channel>	
+			<channel number="30" function="RAFFSTORE" portA="26" portB="27">
+				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
+				<description>Raffstore Ankleide Nord</description>			
+			</channel>	
+			<channel number="31" function="SSR" portA="28" portB="16">
+				<description>Licht Ankleide Kasten WN</description>
+			</channel>			
+			<channel number="32" function="SSR" portA="29" portB="17">
+				<description>Licht Ankleide Kasten WS</description>
+			</channel>
+			<channel number="33" function="SSR" portA="30" portB="18">
+				<description>Steckdosen Schlafzimmer Bett Nord</description>
+			</channel>	
+			<channel number="34" function="SSR" portA="31" portB="19">
+				<description>Steckdosen Schlafzimmer Bett West</description>
+			</channel>	
+			<channel number="35" function="SSR" portA="32" portB="20">
+				<description>Steckdosen Schlafzimmer Bett Ost</description>
+			</channel>																																			
+		</device>
+		<device address="39">
+			<location>Schaltschrank Dachboden Nord</location>
+			<hardware>ControlCAN</hardware>
+			<firmware>firmware/ControlCAN/controlcan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="TEMPSENS" portA="46">
+				<parameter>30</parameter>
+				<description>Onboard Temperature</description>
+			</channel>	
+			<channel number="4" function="INPUT" portA="0">
+				<description>Taster Schlafzimmer Ost Taste 1</description>
+			</channel>
+			<channel number="5" function="INPUT" portA="1">
+				<description>Taster Schlafzimmer Ost Taste 2</description>
+			</channel>
+			<channel number="6" function="INPUT" portA="2">
+				<description>Taster Schlafzimmer Ost Taste 3</description>
+			</channel>
+			<channel number="7" function="INPUT" portA="3">
+				<description>Taster Schlafzimmer Ost Taste 4</description>
+			</channel>
+			<channel number="8" function="INPUT" portA="4">
+				<description>Taster Schlafzimmer Ost Taste 5</description>
+			</channel>
+			<channel number="9" function="INPUT" portA="5">
+				<description>Taster Schlafzimmer Ost Taste 6</description>
+			</channel>
+			<channel number="10" function="INPUT" portA="6">
+				<description>Taster Schlafzimmer Ost Taste 7</description>
+			</channel>
+			<channel number="11" function="INPUT" portA="7">
+				<description>Taster Schlafzimmer Ost Taste 8</description>
+			</channel>
+			<channel number="12" function="LED" portA="34">
+				<description>Taster Schlafzimmer Ost LED 1</description>
+			</channel>
+			<channel number="13" function="LED" portA="35">
+				<description>Taster Schlafzimmer Ost LED 2</description>
+			</channel>			
+			<channel number="14" function="LED" portA="36">
+				<description>Taster Schlafzimmer Ost LED 3</description>
+			</channel>
+			<channel number="15" function="LED" portA="37">
+				<description>Taster Schlafzimmer Ost LED 4</description>
+			</channel>		
+			<channel number="16" function="INPUT" portA="8">
+				<description>Taster Schlafzimmer West Taste 1</description>
+			</channel>
+			<channel number="17" function="INPUT" portA="9">
+				<description>Taster Schlafzimmer West Taste 2</description>
+			</channel>
+			<channel number="18" function="INPUT" portA="10">
+				<description>Taster Schlafzimmer West Taste 3</description>
+			</channel>
+			<channel number="19" function="INPUT" portA="11">
+				<description>Taster Schlafzimmer West Taste 4</description>
+			</channel>
+			<channel number="20" function="INPUT" portA="12">
+				<description>Taster Schlafzimmer West Taste 5</description>
+			</channel>
+			<channel number="21" function="INPUT" portA="13">
+				<description>Taster Schlafzimmer West Taste 6</description>
+			</channel>
+			<channel number="22" function="INPUT" portA="14">
+				<description>Taster Schlafzimmer West Taste 7</description>
+			</channel>
+			<channel number="23" function="INPUT" portA="15">
+				<description>Taster Schlafzimmer West Taste 8</description>
+			</channel>
+			<channel number="24" function="LED" portA="38">
+				<description>Taster Schlafzimmer West LED 1</description>
+			</channel>
+			<channel number="25" function="LED" portA="39">
+				<description>Taster Schlafzimmer West LED 2</description>
+			</channel>			
+			<channel number="26" function="LED" portA="40">
+				<description>Taster Schlafzimmer West LED 3</description>
+			</channel>
+			<channel number="27" function="LED" portA="41">
+				<description>Taster Schlafzimmer West LED 4</description>
+			</channel>	
+			<channel number="28" function="RAFFSTORE" portA="22" portB="23">
+				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
+				<description>Raffstore Ankleide Ost Nord</description>			
+			</channel>	
+			<channel number="29" function="RAFFSTORE" portA="24" portB="25">
+				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
+				<description>Raffstore Ankleide Ost Süd</description>			
+			</channel>	
+			<channel number="30" function="SSR" portA="26" portB="16">
+				<description>Steckdosen Ankleide Nordwand</description>
+			</channel>		
+			<channel number="31" function="SSR" portA="27" portB="17">
+				<description>Steckdosen Ankleide Tür</description>
+			</channel>
+			<channel number="32" function="SSR" portA="28" portB="18">
+				<description>Fluter NW</description>
+			</channel>
+			<channel number="33" function="SSR" portA="29" portB="19">
+				<description>Fluter NO</description>
+			</channel>
+			<channel number="34" function="SSR" portA="30" portB="20">
+				<description>KWL</description>
+			</channel>			
+			<channel number="35" function="DIMMER" portA="44">			
+				<description>Licht Schlafzimmer Bett West</description>
+			</channel>
+			<channel number="36" function="DIMMER" portA="44">			
+				<description>Licht Schlafzimmer Bett Ost</description>
+			</channel>
+			<channel number="37" function="DIMMER" portA="44">			
+				<description>Licht Schlafzimmer Bett Decke</description>
+			</channel>
+			<channel number="38" function="DIMMER" portA="44">			
+				<description>Licht Ankleide Kasten NN</description>
+			</channel>
+			<channel number="39" function="DIMMER" portA="44">			
+				<description>Licht Ankleide Kasten N</description>
+			</channel>
+			<channel number="40" function="DIMMER" portA="44">			
+				<description>Licht Ankleide Kasten NS</description>
+			</channel>
+			<channel number="41" function="DIMMER" portA="44">			
+				<description>Licht Ankleide Kasten SN</description>
+			</channel>
+			<channel number="42" function="DIMMER" portA="44">			
+				<description>Licht Ankleide Kasten S</description>
+			</channel>
+			<channel number="43" function="DIMMER" portA="44">			
+				<description>Licht Ankleide Kasten SS</description>
+			</channel>
+			<channel number="44" function="DIMMER" portA="44">			
+				<description>Licht Ankleide Decke Mitte</description>
+			</channel>
+			<channel number="45" function="DIMMER" portA="44">			
+				<description>Licht Ankleide Decke Eingang</description>
+			</channel>
+		</device>
+		<device address="41">
+			<location>Schaltschrank Keller</location>
+			<hardware>ControlCAN</hardware>
+			<firmware>firmware/ControlCAN/controlcan.hex</firmware>
+			<bootloader>true</bootloader>
+			<channel number="0" function="NONE" portA="0"/>
+			<channel number="1" function="TEMPSENS" portA="46">
+				<parameter>30</parameter>
+				<description>Onboard Temperature</description>
+			</channel>			
 		</device>
 		<device address="64">
 			<location>Keypad Eingangstür</location>
