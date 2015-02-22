@@ -128,7 +128,7 @@ public class BootloaderControl {
 			DatagramPacket p =  msg.getPacket(device.getIP(),HOMECAN_UDP_PORT_BOOTLOADER);		
 			
 			try {
-				Thread.sleep(5);
+				Thread.sleep(50);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
