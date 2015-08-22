@@ -32,6 +32,8 @@ public class ChannelConfig {
 		KWB_TEMP(18),
 		KWB_HK(19),
 		BUSLOAD(20),
+		FRW(21),
+		ENOCEAN_SNIFFER(22),
 		RESERVED(255);
 		
 		byte value;
@@ -67,6 +69,8 @@ public class ChannelConfig {
 			case KWB_TEMP:
 			case KWB_HK:
 			case BUSLOAD:
+			case FRW:
+			case ENOCEAN_SNIFFER:
 				return 1;
 			case RAFFSTORE:				
 			case SSR:

@@ -55,7 +55,9 @@
 														<xs:enumeration value="KWB_INPUT"/>
 														<xs:enumeration value="KWB_TEMP"/>
 														<xs:enumeration value="KWB_HK"/>
-														<xs:enumeration value="BUSLOAD"/>   									
+														<xs:enumeration value="BUSLOAD"/>
+														<xs:enumeration value="FRW"/>   
+														<xs:enumeration value="ENOCEAN_SNIFFER"/>    									
 													</xs:restriction>
 												</xs:simpleType>
 											</xs:attribute>  									

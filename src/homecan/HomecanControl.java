@@ -42,7 +42,7 @@ public class HomecanControl {
 		
 	public void sendConfigForChannel(Device device, byte channel, ChannelConfig config) throws IOException {
 		System.out.println("Sending to "+device.toString()+" channel: "+channel+" "+config.toString());		
-		wait(500);
+		wait(1000);
 		HomecanMsg msg = new HomecanMsg(device.getAddress(), HomecanMsg.MsgType.CHANNEL_CONFIG, channel, config.getPayload());		
 		socketApp.send(msg.getPacket(device.getIP(),HOMECAN_UDP_PORT));
 	}

@@ -201,7 +201,7 @@
 			<channel number="34" function="SSR" portA="26" portB="19">
 				<description>Motorschloß Tag/Nacht</description>
 			</channel>			
-			<channel number="35" function="SSR" portA="27" portB="20">
+			<channel number="35" function="SSR" portA="29" portB="20">
 				<description>Motorschloß Taster</description>
 			</channel>			
 			<channel number="36" function="INPUT" portA="21">
@@ -317,7 +317,6 @@
 				<description>Licht Wohnzimmer</description>
 			</channel>			
 			<channel number="34" function="FTK" portA="45">
-				<parameter>0</parameter>
 				<parameter>96</parameter>
 				<parameter>56</parameter>
 				<parameter>3</parameter>
@@ -326,7 +325,6 @@
 				<description>Hebe/Schiebetür Esszimmer</description>
 			</channel>
 			<channel number="35" function="FTK" portA="45">
-				<parameter>0</parameter>
 				<parameter>5</parameter>
 				<parameter>148</parameter>
 				<parameter>3</parameter>
@@ -335,7 +333,6 @@
 				<description>Hebe/Schiebetür Küche</description>
 			</channel>			
 			<channel number="36" function="FTK" portA="45">
-				<parameter>0</parameter>
 				<parameter>250</parameter>
 				<parameter>97</parameter>
 				<parameter>134</parameter>
@@ -344,19 +341,18 @@
 				<description>Hebe/Schiebetür Sitzplatz</description>
 			</channel>				
 			<channel number="37" function="SSR" portA="22" portB="16">
-				<description>unbelegt</description>
+				<description>Steckdosen über Geshirrspüler</description>
 			</channel>
 			<channel number="38" function="SSR" portA="23" portB="17">
-				<description>unbelegt</description>
+				<description>Steckdosen Esszimmer</description>
 			</channel>
 			<channel number="39" function="SSR" portA="24" portB="18">
-				<description>unbelegt</description>
+				<description>Steckdosen Wohnzimmer Ost</description>
 			</channel>
 			<channel number="40" function="SSR" portA="25" portB="19">
-				<description>unbelegt</description>
+				<description>Steckdosen Wohnzimmer West</description>
 			</channel>
 			<channel number="41" function="FTK" portA="45">
-				<parameter>0</parameter>
 				<parameter>147</parameter>
 				<parameter>49</parameter>
 				<parameter>133</parameter>
@@ -365,7 +361,6 @@
 				<description>Hebe/Schiebetür WG</description>
 			</channel>			
 			<channel number="42" function="FTK" portA="45">
-				<parameter>0</parameter>
 				<parameter>153</parameter>
 				<parameter>55</parameter>
 				<parameter>137</parameter>
@@ -373,15 +368,57 @@
 				<!-- data=[0, 0x89, 0x37, 0x99]] 8992665 -->				
 				<description>FPE Test</description>
 			</channel>			
-			<channel number="43" function="FTK" portA="45">
-				<parameter>1</parameter>
-				<parameter>0</parameter>
-				<parameter>0</parameter>
-				<parameter>0</parameter>
-				<parameter>0</parameter>
-				<!--  data=[-6, 97, -122, 0]] -94272000 -->								
+			<channel number="43" function="ENOCEAN_SNIFFER" portA="45">		
 				<description>ID Sniffer</description>
-			</channel>				
+			</channel>	
+			<channel number="44" function="FRW" portA="45">
+				<parameter>28</parameter>
+				<parameter>149</parameter>
+				<parameter>140</parameter>
+				<parameter>1</parameter>
+				<!-- data=[0x01, 0x8C, 0x95, 0x1C]] 25990428 -->				
+				<description>FRW Wohnzimmer</description>
+			</channel>	
+			<channel number="45" function="FRW" portA="45">
+				<parameter>163</parameter>
+				<parameter>27</parameter>
+				<parameter>151</parameter>
+				<parameter>1</parameter>
+				<!-- data=[0x01, 0x97, 0x1B, 0xA3]] 26680227 -->				
+				<description>FRW Esszimmer</description>
+			</channel>	
+			<channel number="46" function="FRW" portA="45">
+				<parameter>124</parameter>
+				<parameter>67</parameter>
+				<parameter>152</parameter>
+				<parameter>1</parameter>
+				<!-- data=[0x01, 0x98, 0x43, 0x7C]] 26755964 -->				
+				<description>FRW WG</description>
+			</channel>	
+			<channel number="47" function="FRW" portA="45">
+				<parameter>190</parameter>
+				<parameter>62</parameter>
+				<parameter>152</parameter>
+				<parameter>1</parameter>
+				<!-- data=[0x01, 0x98, 0x3E, 0xBE]] 26754750 -->				
+				<description>FRW KiZi</description>
+			</channel>		
+			<channel number="48" function="FRW" portA="45">
+				<parameter>18</parameter>
+				<parameter>65</parameter>
+				<parameter>152</parameter>
+				<parameter>1</parameter>
+				<!-- data=[0x01, 0x98, 0x41, 0x12]] 26755346 -->				
+				<description>FRW Schlafzimmer</description>
+			</channel>					
+			<channel number="49" function="FRW" portA="45">
+				<parameter>240</parameter>
+				<parameter>65</parameter>
+				<parameter>152</parameter>
+				<parameter>1</parameter>
+				<!-- data=[0x01, 0x98, 0x41, 0xF0]] 26755568 -->				
+				<description>FRW Lounge</description>
+			</channel>	
 		</device>
 		<device address="34">
 			<location>Schaltschrank Keller Boiler</location>
@@ -525,10 +562,11 @@
 				<description>Taster Badezimmer Fenster LED 4</description>
 			</channel>			
 			<channel number="28" function="RAFFSTORE" portA="22" portB="23">
-				<parameter>80</parameter> <!-- UP 	 = 5100/t 	-->
-				<parameter>82</parameter> <!-- DOWN  = 5100/t 	-->
+				<parameter>180<!-- 80 --></parameter> <!-- UP 	 = 5100/t 	-->
+				<parameter>188<!-- 82 --></parameter> <!-- DOWN  = 5100/t 	-->
 				<parameter>105</parameter> <!-- OPEN  = 127.5/t	-->
-				<parameter>134</parameter> <!-- CLOSE = 127.5/t	-->				
+				<parameter>134</parameter> <!-- CLOSE = 127.5/t	-->	
+						
 				<description>Raffstore Küche Hebeschiebetür</description>			
 			</channel>
 			<channel number="29" function="RAFFSTORE" portA="24" portB="25">
@@ -831,8 +869,8 @@
 				<description>Raffstore Lounge West</description>			
 			</channel>	
 			<channel number="30" function="RAFFSTORE" portA="26" portB="27">
-				<parameter>134</parameter> <!-- UP 	 = 5100/38s 	-->
-				<parameter>138</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>61</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>66</parameter> <!-- DOWN  = 5100/36.8s 	-->
 				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
 				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->
 				<description>Raffstore Lounge West Groß</description>			
