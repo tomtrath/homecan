@@ -1167,7 +1167,63 @@
 			<channel number="1" function="TEMPSENS" portA="46">
 				<parameter>30</parameter>
 				<description>Onboard Temperature</description>
+			</channel>	
+			<channel number="4" function="INPUT" portA="0">
+				<description>Taster Wintergarten Taste 1</description>
+			</channel>
+			<channel number="5" function="INPUT" portA="1">
+				<description>Taster Wintergarten Taste 2</description>
+			</channel>
+			<channel number="6" function="INPUT" portA="2">
+				<description>Taster Wintergarten Taste 3</description>
+			</channel>
+			<channel number="7" function="INPUT" portA="3">
+				<description>Taster Wintergarten Taste 4</description>
+			</channel>
+			<channel number="8" function="INPUT" portA="4">
+				<description>Taster Wintergarten Taste 5</description>
+			</channel>
+			<channel number="9" function="INPUT" portA="5">
+				<description>Taster Wintergarten Taste 6</description>
+			</channel>
+			<channel number="10" function="INPUT" portA="6">
+				<description>Taster Wintergarten Taste 7</description>
+			</channel>
+			<channel number="11" function="INPUT" portA="7">
+				<description>Taster Wintergarten Taste 8</description>
+			</channel>
+			<channel number="12" function="LED" portA="34">
+				<description>Taster Wintergarten LED 1</description>
+			</channel>
+			<channel number="13" function="LED" portA="35">
+				<description>Taster Wintergarten LED 2</description>
 			</channel>			
+			<channel number="14" function="LED" portA="36">
+				<description>Taster Wintergarten LED 3</description>
+			</channel>
+			<channel number="15" function="LED" portA="37">
+				<description>Taster Wintergarten LED 4</description>
+			</channel>	
+			<channel number="28" function="RAFFSTORE" portA="25" portB="24">
+				<parameter>74</parameter> <!-- UP 	 = 5100/t 	-->
+				<parameter>77</parameter> <!-- DOWN  = 5100/t 	-->
+				<parameter>105</parameter> <!-- OPEN  = 127.5/t	-->
+				<parameter>134</parameter> <!-- CLOSE = 127.5/t	-->				
+				<description>Raffstore Wintergarten HST</description>			
+			</channel>	
+			<channel number="29" function="RAFFSTORE" portA="23" portB="22">
+				<parameter>164</parameter> <!-- UP 	 = 5100/38s 	-->
+				<parameter>168</parameter> <!-- DOWN  = 5100/36.8s 	-->
+				<parameter>120</parameter> <!-- OPEN  = 127.5/t		-->
+				<parameter>130</parameter> <!-- CLOSE = 127.5/t		-->				
+				<description>Raffstore Wintergarten Oberlichte</description>			
+			</channel>							
+			<channel number="30" function="DIMMER" portA="44">
+				<description>Licht Wintergarten</description>
+			</channel>	
+			<channel number="31" function="SSR" portA="26" portB="16">
+				<description>Steckdosen Wintergarten</description>
+			</channel>					
 		</device>
 		<device address="64">
 			<location>Keypad Eingangstür</location>
